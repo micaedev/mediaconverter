@@ -1,0 +1,36 @@
+name: video-converter
+
+services:
+  api:
+    build: ./backend
+    image: video-converter-api:latest
+    environment:
+      VIDEOS_DIR: /videos
+      MAX_UPLOAD_BYTES: ${MAX_UPLOAD_BYTES:-53687091200}
+      DATABASE_URL: sqlite:////data/app.db
+      STORAGE_VOLUMES: ${STORAGE_VOLUMES:-default:/videos:Kaynak (yüklemeler)|./data/videos;output:/output:Dönüştürülmüş çıktı|./data/output}
+      STORAGE_BROWSE_ROOTS: ${STORAGE_BROWSE_ROOTS:-output:/output:Çıktı klasörü|./data/output;media:/host/media:Media diski|/media;mnt:/host/mnt:Mount (/mnt)|/mnt;extra:/host/extra:Ek disk|/host/extra}
+      PUID: ${PUID:-1000}
+      PGID: ${PGID:-1000}
+    volumes:
+      - ./data/videos:/videos
+      - ./data/output:/output
+      - /media:/host/media:rw
+      - /mnt:/host/mnt:rw
+      - ${STORAGE_EXTRA_HOST_PATH:-./data/.optional-extra}:/host/extra:rw
+      - api-data:/data
+    ports:
+      - "8081:8080"
+    restart: unless-stopped
+
+  web:
+    build: ./frontend
+    image: video-converter-web:latest
+    ports:
+      - "3001:80"
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  api-data:
