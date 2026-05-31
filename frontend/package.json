@@ -1,7 +1,7 @@
 {
   "name": "video-converter-frontend",
   "private": true,
-  "version": "1.00.0",
+  "version": "1.01.0",
   "description": "Video Converter — web UI",
   "type": "module",
   "scripts": {

@@ -2,6 +2,26 @@
 
 ---
 
+## v1.01 (2026-05-31) — GitHub sürümü
+
+**Depo:** [micaedev/mediaconverter](https://github.com/micaedev/mediaconverter)  
+**Etiket:** `v1.01`
+
+### Özet
+
+GitHub deposu yayınlandı; sürüm numaraları ve dokümantasyon güncellendi.
+
+### Değişiklikler
+
+| Alan | Açıklama |
+|------|----------|
+| **GitHub** | `micaedev/mediaconverter` deposu oluşturuldu ve push edildi |
+| **README** | Mimari, API, kurulum ve ortam değişkenleri dokümantasyonu |
+| **Arayüz** | Ana sayfada GitHub bağlantısı ve sürüm 1.01 |
+| **API** | `/api/health` sürüm alanı `1.01` |
+
+---
+
 ## v1.00 (2026-05-31) — ilk sürüm
 
 **Etiket:** `v1.00`

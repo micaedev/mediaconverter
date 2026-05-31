@@ -224,7 +224,7 @@ async def lifespan(_app: FastAPI):
     yield
 
 
-app = FastAPI(title="Video Converter API", version="1.00", lifespan=lifespan)
+app = FastAPI(title="Video Converter API", version="1.01", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -237,7 +237,7 @@ app.add_middleware(
 
 @app.get("/api/health")
 async def health():
-    return {"status": "ok", "ffmpeg": "available", "version": "1.00"}
+    return {"status": "ok", "ffmpeg": "available", "version": "1.01"}
 
 
 @app.get("/api/storage/volumes", response_model=list[StorageVolumeOut])

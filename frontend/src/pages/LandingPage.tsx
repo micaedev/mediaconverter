@@ -26,7 +26,15 @@ export default function LandingPage() {
         Çıktı: <strong>H.264</strong> · <strong>MP4</strong> ·{" "}
         <strong>faststart</strong> · kaynak FPS korunur
         <br />
-        Sürüm <strong>1.00</strong>
+        Sürüm <strong>1.01</strong>
+        {" · "}
+        <a
+          href="https://github.com/micaedev/mediaconverter"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </a>
       </p>
     </div>
   );

@@ -1,6 +1,8 @@
 # MediaConverter
 
-**Sürüm 1.00** — Web tabanlı video dönüştürme paneli. Kaynak videoları analiz eder, H.264 MP4 formatına dönüştürür; kaynak FPS korunur, çıktı akış ve analiz için uygundur.
+**Sürüm 1.01** — Web tabanlı video dönüştürme paneli. Kaynak videoları analiz eder, H.264 MP4 formatına dönüştürür; kaynak FPS korunur, çıktı akış ve analiz için uygundur.
+
+**GitHub:** https://github.com/micaedev/mediaconverter
 
 Detaylı sürüm notları: [docs/VERSION.md](docs/VERSION.md)
 
@@ -131,13 +133,13 @@ mediaconverter/
 │       ├── pages/ConvertPage.tsx
 │       └── components/ConvertDialog.tsx
 ├── docker-compose.yml
-├── VERSION            # 1.00
+├── VERSION            # 1.01
 └── docs/VERSION.md
 ```
 
 ---
 
-## Bilinen sınırlamalar (v1.00)
+## Bilinen sınırlamalar (v1.01)
 
 - Aynı anda tek video dönüştürülür.
 - Çok büyük dosyalarda dönüştürme uzun sürebilir.
